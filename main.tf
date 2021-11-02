@@ -1,4 +1,4 @@
-module "site-dedalus" {
+module "site_dedalus" {
 
 resource "aws_instance" "web" {
   ami           = var.ami
