@@ -1,4 +1,12 @@
-module "site_dedalus" {
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "~> 3.0"
+      region = "us-east-1"
+    }
+  }
+}
 
 resource "aws_instance" "web" {
   ami           = var.ami
@@ -20,4 +28,3 @@ resource "aws_instance" "backend" {
   }
 }
 
-}
